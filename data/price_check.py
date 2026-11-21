@@ -82,6 +82,16 @@ for nights, flights, room, car in [(3, 773_600, 28_560, 28_710), (4, 838_800, 37
     routes = {"taxi": (taxi_distance_fare, taxi_distance_fare + 7 * 400)}
     for name, daily_cover in [("CDW", 1_430), ("CDW and NOC", 3_630)]:
         routes[name] = tuple(car + nights * daily_cover + fuel for fuel in (1_108, 1_375))
+    base_with_own_clubs = [
+        flights + won(fx * (room + takamatsu_golf + transport))
+        for transport in routes["CDW and NOC"]
+    ]
+    for outbound_steps, return_steps in [(0, 0), (0, 1), (1, 1), (2, 2), (3, 3), (4, 4)]:
+        bag_fee = 45_000 * outbound_steps + won(fx * 4_500 * return_steps)
+        low, high = [amount + bag_fee for amount in base_with_own_clubs]
+        print(f"Own clubs {nights}N, {30+5*outbound_steps}/{30+5*return_steps}kg: "
+              f"party {low:,}–{high:,}, per person {won(Decimal(low)/2):,}–{won(Decimal(high)/2):,}, "
+              f"remaining {budget-high:,}–{budget-low:,}, prepaid bags {bag_fee:,}")
     for name, transport in routes.items():
         for mobility in transport:
             yen = room + takamatsu_golf + takamatsu_rental_set + mobility
