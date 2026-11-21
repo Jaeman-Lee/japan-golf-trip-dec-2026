@@ -52,3 +52,22 @@ package_subtotal("Hana Kagoshima 54H, standard", 1_325_900, transfer_pp=30_000, 
 kanmon_local_pp = won(fx * 8_000)
 package_subtotal("Kanmon 54H, before equipment", 999_000 + kanmon_local_pp, two_ball_pp=50_000)
 package_subtotal("Gran Cerezo Kagoshima 54H", 1_290_000, two_ball_pp=150_000)
+
+# Three-night alternatives. Unknown fees and meals are outside these subtotals.
+for yen_per_party in (8_000, 16_000):
+    package_subtotal(f"Saga, transfer {yen_per_party:,} JPY for two, before Sunday fee",
+                     1_040_000, two_ball_pp=2 * 20_000, team_fee=won(fx * yen_per_party))
+
+package_subtotal("Yatsushiro, both bring clubs", 1_290_000)
+package_subtotal("Yatsushiro, one set for three rounds", 1_290_000,
+                 team_fee=won(fx * 3 * 4_400))
+for fee_per_round in (10_000, 20_000):
+    package_subtotal("Kumamoto city, land and displayed airfare", 830_000 + 335_341,
+                     transfer_pp=60_000, two_ball_pp=3 * fee_per_round)
+package_subtotal("Matsuyama, Dec 21, before two-player surcharge", 1_350_000)
+package_subtotal("Matsuyama, Dec 20, before two-player surcharge", 1_500_000)
+package_subtotal("Hana Fukuoka city", 1_726_900, transfer_pp=280_000, two_ball_pp=3 * 20_000)
+package_subtotal("Hana Kumamoto station", 1_366_900, transfer_pp=340_000, two_ball_pp=3 * 22_000)
+
+package_subtotal("Osaka Hinode, undated three-night starting price", 1_500_000)
+package_subtotal("Kobe, 72H rather than 54H", 2_120_000)
