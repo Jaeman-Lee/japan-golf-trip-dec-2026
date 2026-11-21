@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-11-21",
+  "currency": "KRW",
+  "krw_per_jpy": "8.443",
+  "party": 2,
+  "budget_krw": 2400000,
+  "air_quote_krw": 728600,
+  "hotel_with_breakfast_jpy": 50400,
+  "green_fees_party_by_day_jpy": [
+    14000,
+    15000,
+    18000
+  ],
+  "club_rental_delivered_jpy": 13740,
+  "refundable_club_deposit_jpy": 50000,
+  "airport_taxi_return_jpy": 11600,
+  "airport_booking_allowance_jpy": 800,
+  "golf_taxi_per_leg_jpy": 4600,
+  "onsen_entry_party_jpy": 1400,
+  "onsen_train_return_party_jpy": 1640,
+  "harbour_train_return_party_jpy": 920,
+  "example_checked_bag_out_krw": 120000,
+  "example_checked_bag_return_jpy": 12000
+}
