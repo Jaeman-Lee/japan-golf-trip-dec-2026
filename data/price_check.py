@@ -26,3 +26,29 @@ non_golf_54 = Decimal(p['air_quote_krw']) + fx * (shared + 6 * p['golf_taxi_per_
 print(f'54H before green fees: {won(non_golf_54):,} KRW')
 for cap in (2040000, 2100000, 2150000):
     print(f'At {cap:,} KRW: golf fees for both = {(Decimal(cap)-non_golf_54)/fx:.1f} JPY')
+
+# Public package prices. Green fees, breakfast and shared transfers are included
+# in these subtotals. Unpriced meals, golf bags and equipment are excluded.
+budget = p["budget_krw"]
+def package_subtotal(label, base_pp, transfer_pp=0, two_ball_pp=0, team_fee=0):
+    total = p["party"] * (base_pp + transfer_pp + two_ball_pp) + team_fee
+    print(f'{label}: party {total:,} KRW, per person {total // p["party"]:,} KRW, remaining {budget - total:,} KRW')
+    return total
+
+for unit, per_player, per_group in [("team", 0, 20_000), ("person", 20_000, 0)]:
+    total = package_subtotal(f"Takamatsu 54H, fee per {unit}", 990_000,
+                             two_ball_pp=3 * per_player, team_fee=3 * per_group)
+    for club, final_rental in [("Gold", 2_750), ("Royal", 3_300)]:
+        rental_yen = 2 * 2_200 + final_rental
+        with_one_set = total + won(fx * rental_yen)
+        print(f'  {club}: rental {rental_yen:,} JPY, party {with_one_set:,} KRW, remaining {budget - with_one_set:,} KRW')
+
+package_subtotal("Prime Beppu 54H", 1_080_000, transfer_pp=60_000, two_ball_pp=3 * 20_000)
+package_subtotal("Hana Beppu 54H, standard", 1_235_900, transfer_pp=60_000, two_ball_pp=3 * 40_000)
+package_subtotal("Hana Beppu 54H, member", 1_205_900, transfer_pp=60_000, two_ball_pp=3 * 40_000)
+package_subtotal("Smile Kagoshima 54H", 1_240_000, two_ball_pp=120_000)
+package_subtotal("Hana Kagoshima 54H, standard", 1_325_900, transfer_pp=30_000, two_ball_pp=3 * 30_000)
+
+kanmon_local_pp = won(fx * 8_000)
+package_subtotal("Kanmon 54H, before equipment", 999_000 + kanmon_local_pp, two_ball_pp=50_000)
+package_subtotal("Gran Cerezo Kagoshima 54H", 1_290_000, two_ball_pp=150_000)
