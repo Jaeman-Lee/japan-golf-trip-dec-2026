@@ -9,13 +9,20 @@ fx = Decimal(p['krw_per_jpy'])
 def won(amount):
     return int(amount.quantize(Decimal('1'), rounding=ROUND_HALF_UP))
 
+shared = sum(p[key] for key in (
+    'hotel_with_breakfast_jpy', 'club_rental_delivered_jpy', 'airport_taxi_return_jpy',
+    'airport_booking_allowance_jpy', 'onsen_entry_party_jpy', 'onsen_train_return_party_jpy',
+    'harbour_train_return_party_jpy'))
+
 for rounds in (3, 2):
-    shared = sum(p[key] for key in (
-        'hotel_with_breakfast_jpy', 'club_rental_delivered_jpy', 'airport_taxi_return_jpy',
-        'airport_booking_allowance_jpy', 'onsen_entry_party_jpy', 'onsen_train_return_party_jpy',
-        'harbour_train_return_party_jpy'))
     local = shared + sum(p['green_fees_party_by_day_jpy'][:rounds]) + 2 * rounds * p['golf_taxi_per_leg_jpy']
     subtotal = Decimal(p['air_quote_krw']) + fx * local
     baggage = Decimal(p['example_checked_bag_out_krw']) + fx * p['example_checked_bag_return_jpy']
     for label, total in [('base', subtotal), ('25kg example', subtotal + baggage)]:
         print(f'{rounds * 18}H {label}: party {won(total):,} KRW, per person {won(total / p["party"]):,} KRW, remaining {won(p["budget_krw"] - total):,} KRW')
+
+# Compare a supplier's three-round quote with package subtotals.
+non_golf_54 = Decimal(p['air_quote_krw']) + fx * (shared + 6 * p['golf_taxi_per_leg_jpy'])
+print(f'54H before green fees: {won(non_golf_54):,} KRW')
+for cap in (2040000, 2100000, 2150000):
+    print(f'At {cap:,} KRW: golf fees for both = {(Decimal(cap)-non_golf_54)/fx:.1f} JPY')
