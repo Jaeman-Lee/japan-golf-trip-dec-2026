@@ -32,7 +32,7 @@ for cap in (2040000, 2100000, 2150000):
 budget = p["budget_krw"]
 def package_subtotal(label, base_pp, transfer_pp=0, two_ball_pp=0, team_fee=0):
     total = p["party"] * (base_pp + transfer_pp + two_ball_pp) + team_fee
-    print(f'{label}: party {total:,} KRW, per person {total // p["party"]:,} KRW, remaining {budget - total:,} KRW')
+    print(f'{label}: party {total:,} KRW, per person {won(Decimal(total) / p["party"]):,} KRW, remaining {budget - total:,} KRW')
     return total
 
 for unit, per_player, per_group in [("team", 0, 20_000), ("person", 20_000, 0)]:
@@ -71,3 +71,24 @@ package_subtotal("Hana Kumamoto station", 1_366_900, transfer_pp=340_000, two_ba
 
 package_subtotal("Osaka Hinode, undated three-night starting price", 1_500_000)
 package_subtotal("Kobe, 72H rather than 54H", 2_120_000)
+
+# Matched Takamatsu routes (same golf dates, Gold on the last morning).
+# All local prices below cover both travellers unless labelled per day.
+takamatsu_golf = 2 * (9_680 + 10_010 + 7_350)
+takamatsu_rental_set = 2 * 2_200 + 2_750
+taxi_one_way = [6_400, 6_800, 6_800, 6_800, 6_800, 8_500, 2_900]
+taxi_distance_fare = sum(taxi_one_way)
+for nights, flights, room, car in [(3, 773_600, 28_560, 28_710), (4, 838_800, 37_500, 37_125)]:
+    routes = {"taxi": (taxi_distance_fare, taxi_distance_fare + 7 * 400)}
+    for name, daily_cover in [("CDW", 1_430), ("CDW and NOC", 3_630)]:
+        routes[name] = tuple(car + nights * daily_cover + fuel for fuel in (1_108, 1_375))
+    for name, transport in routes.items():
+        for mobility in transport:
+            yen = room + takamatsu_golf + takamatsu_rental_set + mobility
+            total = flights + won(fx * yen)
+            print(f"Takamatsu {nights}N {name}: party {total:,}, per person {won(Decimal(total) / 2):,}, remaining {budget - total:,}")
+package_club = won(fx * takamatsu_rental_set)
+for team in (60_000, 120_000):
+    package_subtotal("Matched 3N package with Gold rental", 990_000, team_fee=team + package_club)
+print(f"Second set, extra 5kg both ways: {45_000 + won(fx * 4_500):,} KRW")
+print(f"Onsen and harbour, both: {won(fx * (2 * 700 + 4 * 410 + 4 * 230)):,} KRW")
