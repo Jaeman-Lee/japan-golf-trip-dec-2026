@@ -4,7 +4,7 @@
   "krw_per_jpy": "8.443",
   "party": 2,
   "budget_krw": 2400000,
-  "air_quote_krw": 728600,
+  "air_quote_krw": 773200,
   "hotel_with_breakfast_jpy": 50400,
   "green_fees_party_by_day_jpy": [
     14000,
@@ -19,6 +19,7 @@
   "onsen_entry_party_jpy": 1400,
   "onsen_train_return_party_jpy": 1640,
   "harbour_train_return_party_jpy": 920,
-  "example_checked_bag_out_krw": 120000,
-  "example_checked_bag_return_jpy": 12000
+  "example_checked_bag_out_krw": 80000,
+  "example_checked_bag_return_jpy": 8000,
+  "included_checked_kg_per_person": 15
 }
