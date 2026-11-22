@@ -33,7 +33,6 @@
     "roundtrip_air_krw": 853600,
     "included_kg_per_person_assumed": 15,
     "hotel_breakfast_jpy": 46300,
-    "minivan_and_protection_jpy": 51645,
     "night_parking_jpy": [
       4000,
       5600
@@ -54,5 +53,18 @@
     "hotel_breakfast_onsen_jpy": 39400,
     "night_parking_jpy": 4000,
     "route_km": "134.0876"
+  },
+  "budget_airport_car_quotes": {
+    "as_of_kst": "2026-11-22 14:04",
+    "days": 4,
+    "M": {
+      "base_jpy": 37125,
+      "safety_per_day_jpy": 3630
+    },
+    "WA": {
+      "base_jpy": 62271,
+      "safety_per_day_jpy": 4730
+    },
+    "etc_card_optional_jpy": 330
   }
 }

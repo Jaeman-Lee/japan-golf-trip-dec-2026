@@ -109,13 +109,21 @@ print(f"Onsen and harbour, both: {won(fx * (2 * 700 + 4 * 410 + 4 * 230)):,} KRW
 
 # Four nights at Comfort, with the airport day free of golf.
 trip = p["comfort_royal_gold_sakaide"]
+car_quotes = p["budget_airport_car_quotes"]
+def car_with_protection(group):
+    quote = car_quotes[group]
+    return quote["base_jpy"] + quote["safety_per_day_jpy"] * car_quotes["days"]
+car_m = car_with_protection("M")
+car_wa = car_with_protection("WA")
+print(f"Four-day car rental with Safety: M {car_m:,} JPY, WA {car_wa:,} JPY, "
+      f"upgrade {car_wa-car_m:,} JPY ({won(fx * (car_wa-car_m)):,} KRW before fuel).")
 fuel_yen = [
     won(Decimal(trip["route_km"]) * Decimal(trip["fuel_jpy_per_l"]) / Decimal(efficiency))
     for efficiency in trip["km_per_l"]
 ]
 excursions_yen = sum(p[key] for key in (
     "onsen_entry_party_jpy", "onsen_train_return_party_jpy", "harbour_train_return_party_jpy"))
-base_local_yen = (trip["hotel_breakfast_jpy"] + trip["minivan_and_protection_jpy"]
+base_local_yen = (trip["hotel_breakfast_jpy"] + car_m
                   + three_course_party + excursions_yen + trip["parking_allowance_jpy"])
 local_yen = [base_local_yen + parking + fuel
              for parking, fuel in zip(trip["night_parking_jpy"], fuel_yen)]
@@ -123,7 +131,7 @@ included_kg = p["party"] * trip["included_kg_per_person_assumed"]
 def excess_steps(kg):
     return (max(0, kg - included_kg) + trip["bag_step_kg"] - 1) // trip["bag_step_kg"]
 def print_weight_scenarios(label, local_bounds):
-    for outbound, inbound in [(30, 30), (30, 35), (35, 35), (40, 40), (45, 45)]:
+    for outbound, inbound in [(30, 30), (30, 35), (35, 35), (40, 40), (45, 45), (60, 60)]:
         air_krw = trip["roundtrip_air_krw"] + excess_steps(outbound) * trip["prepay_per_step_out_krw"]
         inbound_jpy = excess_steps(inbound) * trip["prepay_per_step_in_jpy"]
         totals = [Decimal(air_krw) + fx * (yen + inbound_jpy) for yen in local_bounds]
@@ -137,7 +145,7 @@ print_weight_scenarios("Comfort 4N", local_yen)
 # Use the lodging's bath instead of the separate Busshozan visit.
 super_hotel = p["super_hotel_kinenkan"]
 super_fixed_yen = (super_hotel["hotel_breakfast_onsen_jpy"] + super_hotel["night_parking_jpy"]
-                   + trip["parking_allowance_jpy"] + trip["minivan_and_protection_jpy"]
+                   + trip["parking_allowance_jpy"] + car_m
                    + three_course_party + p["harbour_train_return_party_jpy"])
 super_local_yen = [
     super_fixed_yen + won(Decimal(super_hotel["route_km"]) * Decimal(trip["fuel_jpy_per_l"])
