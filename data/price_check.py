@@ -75,6 +75,10 @@ package_subtotal("Kobe, 72H rather than 54H", 2_120_000)
 # Matched Takamatsu routes (same golf dates, Gold on the last morning).
 # All local prices below cover both travellers unless labelled per day.
 takamatsu_golf = 2 * (9_680 + 10_010 + 7_350)
+three_course_player = sum(p["three_course_gdo_jpy_per_player"].values())
+three_course_party = p["party"] * three_course_player
+print(f"GDO Royal/Sakaide/Gold 54H: {three_course_player:,} JPY per player, "
+      f"{three_course_party:,} JPY per party, {takamatsu_golf - three_course_party:,} JPY lower golf fees")
 takamatsu_rental_set = 2 * 2_200 + 2_750
 taxi_one_way = [6_400, 6_800, 6_800, 6_800, 6_800, 8_500, 2_900]
 taxi_distance_fare = sum(taxi_one_way)

@@ -21,5 +21,11 @@
   "harbour_train_return_party_jpy": 920,
   "example_checked_bag_out_krw": 80000,
   "example_checked_bag_return_jpy": 8000,
-  "included_checked_kg_per_person": 15
+  "included_checked_kg_per_person": 15,
+  "three_course_gdo_jpy_per_player": {
+    "royal_takamatsu": 8440,
+    "sakaide": 8750,
+    "sakaide_twosome_surcharge": 1100,
+    "takamatsu_gold": 7350
+  }
 }
