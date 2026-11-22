@@ -122,11 +122,26 @@ local_yen = [base_local_yen + parking + fuel
 included_kg = p["party"] * trip["included_kg_per_person_assumed"]
 def excess_steps(kg):
     return (max(0, kg - included_kg) + trip["bag_step_kg"] - 1) // trip["bag_step_kg"]
-for outbound, inbound in [(30, 30), (30, 35), (35, 35), (40, 40), (45, 45)]:
-    air_krw = trip["roundtrip_air_krw"] + excess_steps(outbound) * trip["prepay_per_step_out_krw"]
-    inbound_jpy = excess_steps(inbound) * trip["prepay_per_step_in_jpy"]
-    totals = [Decimal(air_krw) + fx * (yen + inbound_jpy) for yen in local_yen]
-    low, high = [won(total) for total in totals]
-    print(f"Comfort 4N, {outbound}/{inbound}kg: {low:,}–{high:,} KRW for two, "
-          f"{won(totals[0]/p['party']):,}–{won(totals[1]/p['party']):,} per person, "
-          f"remaining {budget-high:,}–{budget-low:,}")
+def print_weight_scenarios(label, local_bounds):
+    for outbound, inbound in [(30, 30), (30, 35), (35, 35), (40, 40), (45, 45)]:
+        air_krw = trip["roundtrip_air_krw"] + excess_steps(outbound) * trip["prepay_per_step_out_krw"]
+        inbound_jpy = excess_steps(inbound) * trip["prepay_per_step_in_jpy"]
+        totals = [Decimal(air_krw) + fx * (yen + inbound_jpy) for yen in local_bounds]
+        low, high = [won(total) for total in totals]
+        print(f"{label}, {outbound}/{inbound}kg: {low:,}–{high:,} KRW for two, "
+              f"{won(totals[0]/p['party']):,}–{won(totals[1]/p['party']):,} per person, "
+              f"remaining {budget-high:,}–{budget-low:,}")
+
+print_weight_scenarios("Comfort 4N", local_yen)
+
+# Use the lodging's bath instead of the separate Busshozan visit.
+super_hotel = p["super_hotel_kinenkan"]
+super_fixed_yen = (super_hotel["hotel_breakfast_onsen_jpy"] + super_hotel["night_parking_jpy"]
+                   + trip["parking_allowance_jpy"] + trip["minivan_and_protection_jpy"]
+                   + three_course_party + p["harbour_train_return_party_jpy"])
+super_local_yen = [
+    super_fixed_yen + won(Decimal(super_hotel["route_km"]) * Decimal(trip["fuel_jpy_per_l"])
+                          / Decimal(efficiency))
+    for efficiency in trip["km_per_l"]
+]
+print_weight_scenarios("Super Hotel non-smokers 4N", super_local_yen)

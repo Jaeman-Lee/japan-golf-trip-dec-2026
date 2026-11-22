@@ -48,5 +48,11 @@
     "bag_step_kg": 5,
     "prepay_per_step_out_krw": 45000,
     "prepay_per_step_in_jpy": 4500
+  },
+  "super_hotel_kinenkan": {
+    "quote_as_of_kst": "2026-11-22 13:54–13:56",
+    "hotel_breakfast_onsen_jpy": 39400,
+    "night_parking_jpy": 4000,
+    "route_km": "134.0876"
   }
 }
