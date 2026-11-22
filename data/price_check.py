@@ -106,3 +106,27 @@ for team in (60_000, 120_000):
     package_subtotal("Matched 3N package with Gold rental", 990_000, team_fee=team + package_club)
 print(f"Second set, extra 5kg both ways: {45_000 + won(fx * 4_500):,} KRW")
 print(f"Onsen and harbour, both: {won(fx * (2 * 700 + 4 * 410 + 4 * 230)):,} KRW")
+
+# Four nights at Comfort, with the airport day free of golf.
+trip = p["comfort_royal_gold_sakaide"]
+fuel_yen = [
+    won(Decimal(trip["route_km"]) * Decimal(trip["fuel_jpy_per_l"]) / Decimal(efficiency))
+    for efficiency in trip["km_per_l"]
+]
+excursions_yen = sum(p[key] for key in (
+    "onsen_entry_party_jpy", "onsen_train_return_party_jpy", "harbour_train_return_party_jpy"))
+base_local_yen = (trip["hotel_breakfast_jpy"] + trip["minivan_and_protection_jpy"]
+                  + three_course_party + excursions_yen + trip["parking_allowance_jpy"])
+local_yen = [base_local_yen + parking + fuel
+             for parking, fuel in zip(trip["night_parking_jpy"], fuel_yen)]
+included_kg = p["party"] * trip["included_kg_per_person_assumed"]
+def excess_steps(kg):
+    return (max(0, kg - included_kg) + trip["bag_step_kg"] - 1) // trip["bag_step_kg"]
+for outbound, inbound in [(30, 30), (30, 35), (35, 35), (40, 40), (45, 45)]:
+    air_krw = trip["roundtrip_air_krw"] + excess_steps(outbound) * trip["prepay_per_step_out_krw"]
+    inbound_jpy = excess_steps(inbound) * trip["prepay_per_step_in_jpy"]
+    totals = [Decimal(air_krw) + fx * (yen + inbound_jpy) for yen in local_yen]
+    low, high = [won(total) for total in totals]
+    print(f"Comfort 4N, {outbound}/{inbound}kg: {low:,}–{high:,} KRW for two, "
+          f"{won(totals[0]/p['party']):,}–{won(totals[1]/p['party']):,} per person, "
+          f"remaining {budget-high:,}–{budget-low:,}")

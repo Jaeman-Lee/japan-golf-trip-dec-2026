@@ -1,6 +1,35 @@
 # 12월 일본 도심 골프여행 · 직접예약과 패키지 비교
 
-**2026년 12월 20일(일)~24일(목) 인천 출발, 성인 2명. 1인 120만 원, 합계 240만 원.** 가격 조회일 2026-11-21. 아래 원화는 11/20 ECB 고시 100엔 ≈ 844.3원으로 환산했다. 현지 가격은 엔화가 기준이다. [환율](https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?f64eb1456a8d9f511c8d0ac3373cf438)
+**2026년 12월 20일(일)~24일(목) 인천 출발, 성인 2명. 1인 120만 원, 합계 240만 원.** 가격 확인일 2026-11-21~22. 각 표에 조회 시각을 표시했다. 아래 원화는 11/20 ECB 고시 100엔 ≈ 844.3원으로 환산했다. 현지 가격은 엔화가 기준이다. [환율](https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf?f64eb1456a8d9f511c8d0ac3373cf438)
+
+## 귀국일 오전을 비운 4박 54홀 · 컴포트 호텔과 렌터카
+
+12/20 인천에서 출발해 시내에서 4박하고, 21~23일 각각 다른 구장을 돈다. GDO 날짜별 판매 화면에서 2026-11-22 13:52~13:53 한국시간에 세 라운드 모두 18홀·카트·세금 포함 **2인 단독 보장**을 확인했다. 세 날짜의 합계는 **1인 25,640엔, 2인 51,280엔**이다. 각자 클럽 한 세트를 지참한다.
+
+| 날짜 | 일정 | 2인 조회가 및 포함 항목 |
+|---|---|---:|
+| 12/20 일 | 14:10 인천 출발, 15:50 다카마쓰 도착. 17:00 버젯 공항점 인수 예정. 저녁 선포트 항구 | 항구 행사는 아래 관광비에 반영 |
+| 12/21 월 | [로열 다카마쓰 09:08 OUT](https://reserve.golfdigest.co.jp/rs/rt/rt_entry/?gcid=828501&playdate=20261221&style=561), 오후 부쇼잔 온천 | 16,880엔 · 중식 별도 |
+| 12/22 화 | [다카마쓰 골드 09:00 OUT](https://reserve.golfdigest.co.jp/rs/rt/rt_entry/?gcid=820102&playdate=20261222&style=2381), 오후 시내 쇼핑 | 14,700엔 · 중식 별도 |
+| 12/23 수 | [사카이데 10:04 아야가와 IN](https://reserve.golfdigest.co.jp/rs/rt/rt_entry/?gcid=822102&playdate=20261223&style=1476) | 19,700엔 · 2인 할증 및 중식 포함 |
+| 12/24 목 | 오전 자유 일정, 14:00 렌터카 반납 예정. 16:50 다카마쓰 출발, 18:35 인천 도착 | 공항점 무료 셔틀, 대기시간 별도 |
+
+**2인 예산 240만 원에서 남는 금액**은 아래와 같다. 왕복 853,600원 운임에 1인당 위탁 15kg가 양방향 포함되고 두 사람이 함께 수속해 합산할 때의 **계산값**이다. 수하물 추가금은 편도별 초과 5kg 단위로 계산했다. 남는 돈에서 미포함 식사, 여행보험, 개인 쇼핑, 국내 공항 교통, 추가 주행·주차를 부담한다.
+
+| 2인 합산 위탁 출국 / 귀국 | 1인 평균(원) | 2인 소계(원) | 240만 원 예산 잔여(원) |
+|---|---:|---:|---:|
+| 30 / 30kg | 1,097,765~1,105,799 | 2,195,530~2,211,597 | 188,403~204,470 |
+| 30 / 35kg | 1,116,762~1,124,795 | 2,233,524~2,249,591 | 150,409~166,476 |
+| 35 / 35kg | 1,139,262~1,147,295 | 2,278,524~2,294,591 | 105,409~121,476 |
+| 40 / 40kg | 1,180,759~1,188,792 | 2,361,517~2,377,584 | 22,416~38,483 |
+| 45 / 45kg | 1,222,255~1,230,289 | 2,444,511~2,460,578 | 44,511~60,578 초과 |
+
+- **항공.** 11/22 13:50 한국시간 성인 2인 왕복 조회가는 853,600원. 필수 세금·수수료 포함, 수하물은 화면에 중량 미표시. 11/21 17:55 한국시간의 위탁 15kg씩 포함 838,800원은 이전 조회가다. 출국 45,000원·귀국 4,500엔/5kg 기준으로 가정했으며 발권 시 포함량·사전 구매 가능 여부가 달라질 수 있다. [왕복 항공 조회](https://www.google.com/travel/flights?tfs=CBwQAhpBEgoyMDI2LTEyLTIwIh8KA0lDThIKMjAyNi0xMi0yMBoDVEFLKgJMSjIDMjk5KABqBwgBEgNJQ05yBwgBEgNUQUsaIBIKMjAyNi0xMi0yNCgAagcIARIDVEFLcgcIARIDSUNOQAFAAUgBagQQABgBcAGYAQE&hl=en&gl=KR&curr=KRW) · [진에어 위탁 사전 구매](https://www.jinair.com/addService/onlineBaggage)
+- **숙소.** 11/22 13:51 한국시간 컴포트 호텔 다카마쓰 금연 더블 4박·2인 조식 포함 46,300엔 조회. 조식 06:30~09:30, 2층 공용 전자레인지 사용 가능. 마루나카 다마치점은 09:00~22:00이며 외부 구매 음식의 객실 취식 허용 여부는 미확인이다. [날짜별 호텔 직판](https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=CH780&hcod2=001&hidmode=select&mode=seek&hidSELECTARRYMD=2026%2F12%2F20&hidSELECTHAKSU=4&room=1&hidSELECTadult=2&sortmethod=priceup) · [조식](https://www.choice-hotels.jp/hotel/takamatsu/breakfast/) · [호텔 답변](https://www.jalan.net/yad304080/qa/) · [마트](https://www.the-fuji.com/mv/store/shop/kagawa/m_tamachi.php)
+- **차량.** 11/22 09:31 한국시간 버젯 다카마쓰 공항점 12/20 17:00~12/24 14:00 M급 미니밴 조회가는 51,645엔(기본 37,125엔, 면책·휴차보상 14,520엔). 실제 차종과 골프백·캐리어 동시 적재는 미확인이다. 13:53에 계산한 공항점 왕복·세 골프장 왕복 8편의 경로는 132.46km. 가가와 11/16 휘발유 170.6엔/L, 연비 14.5~18km/L 가정으로 유류 1,255~1,558엔을 잡았다. [버젯](https://www.budgetrentacar.co.jp/kr/shop/kagawa/0099/) · [보상표](https://www.budgetrentacar.co.jp/files/foreign/hosyou_kr.pdf) · [8편 도로 경로](https://router.project-osrm.org/route/v1/driving/134.0293234,34.2288599;134.0473985,34.3375595;133.9982247,34.2120344;134.0473985,34.3375595;133.989151,34.1963005;134.0473985,34.3375595;133.91261,34.288243;134.0473985,34.3375595;134.0293234,34.2288599?overview=false&steps=false&continue_straight=false) · [주유 단가](https://opengov.jp/prices/gasoline/kagawa/)
+- **주차·관광.** 11/22 13:51~13:53 한국시간 공시액 확인. 호텔 인근 평면 고토부키야는 15:00~익일 10:00 1박 1,000엔, 호텔 부지 타임즈는 14:00~익일 11:00 1박 1,400엔. 선착순 야간 4박 4,000~5,600엔에 추가 주차 **예비비** 500엔을 반영했다. 가와라마치 출발 항구 및 온천 전철 왕복과 부쇼잔 입욕료는 2인 합계 3,960엔. [주차 안내](https://www.choice-hotels.jp/hotel/takamatsu/images/pkmap.pdf) · [타임즈](https://btimes.jp/kagawa/times/BUK0073526/) · [전철](https://www.kotoden.co.jp/publichtm/kotoden/fare/fare-eki/103kawara20261001.htm) · [온천](https://busshozan.com/) · [항구 행사](https://kagawanightproject.jp/event/)
+
+**숙소 절감 대안.** 11/22 13:54~13:55 한국시간 자란의 슈퍼호텔 다카마쓰 긴엔칸 금연 더블(150cm), 조식·대욕장 포함 4박 2인 현장결제 플랜은 세금 포함 39,400엔으로 조회됐다. 객실료는 컴포트보다 6,900엔 낮다. 고토부키야 주차장은 15:00~익일 10:00 1박 1,000엔, 선착순이다. 한국 휴대전화로 예약 가능한지와 이 숙소의 새 주행거리·부대비용은 미확인으로 위 합계는 컴포트 기준이다. [자란 날짜별 판매 화면](https://www.jalan.net/uw/uwp3200/uww3201init.do?stayCount=4&roomCount=1&roomCrack=200000&stayYear=2026&stayMonth=12&distCd=01&yadNo=358722&smlCd=370202&adultNum=2&stayDay=20&screenId=UWW3101&planCd=03964231&roomTypeCd=0496139)
 
 ## 세 골프장에서 두 사람만 치는 54홀
 

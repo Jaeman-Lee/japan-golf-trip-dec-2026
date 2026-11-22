@@ -27,5 +27,26 @@
     "sakaide": 8750,
     "sakaide_twosome_surcharge": 1100,
     "takamatsu_gold": 7350
+  },
+  "comfort_royal_gold_sakaide": {
+    "quote_as_of_kst": "2026-11-22 13:50–13:53",
+    "roundtrip_air_krw": 853600,
+    "included_kg_per_person_assumed": 15,
+    "hotel_breakfast_jpy": 46300,
+    "minivan_and_protection_jpy": 51645,
+    "night_parking_jpy": [
+      4000,
+      5600
+    ],
+    "parking_allowance_jpy": 500,
+    "route_km": "132.4595",
+    "fuel_jpy_per_l": "170.6",
+    "km_per_l": [
+      "18",
+      "14.5"
+    ],
+    "bag_step_kg": 5,
+    "prepay_per_step_out_krw": 45000,
+    "prepay_per_step_in_jpy": 4500
   }
 }
